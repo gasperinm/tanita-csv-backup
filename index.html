@@ -11,20 +11,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/papaparse.min.js"></script>
     <script src="js/main.js"></script>
-
-    <style>
-        /* #parsingSuccess {
-            display: none;
-        }
-
-        #parsingFail {
-            display: none;
-        }
-
-        #download {
-            display: none;
-        } */
-    </style>
 </head>
 
 <body>
@@ -33,9 +19,9 @@
 
 </html>
 
-<h1 class="display-4">Tanita BC-601 CSV parser</h1>
+<h1 class="display-4">Tanita BC-601 CSV backup</h1>
 <p>This was made using <a href="https://www.papaparse.com/" target="_blank">Papa Parse</a> CSV parser.</p>
-<label for="files">Select a DATA.CSV file you want to parse (for example: DATA1.CSV)</label>
+<label for="files">Select a DATA.CSV file you want to backup data for (for example: DATA1.CSV)</label>
 <br>
 <input type="file" id="files" multiple>
 <button onclick="parse()" class="btn btn-success">Parse</button>
