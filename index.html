@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tanita BC-601 CSV parser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        /* #parsingSuccess {
+            display: none;
+        }
+
+        #parsingFail {
+            display: none;
+        }
+
+        #download {
+            display: none;
+        } */
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<h1 class="display-4">Tanita BC-601 CSV parser</h1>
+<p>This was made using <a href="https://www.papaparse.com/" target="_blank">Papa Parse</a> CSV parser.</p>
+<label for="files">Select a DATA.CSV file you want to parse (for example: DATA1.CSV)</label>
+<br>
+<input type="file" id="files" multiple>
+<button onclick="parse()" class="btn btn-success">Parse</button>
+<div id="parsingSuccess" class="alert alert-success" role="alert" style="display:none">
+    Parsing successfull, download your file by clicking the Download button.
+</div>
+<div id="parsingFail" class="alert alert-danger" role="alert" style="display:none">
+    Something went wrong while parsing. Check console.
+</div>
+<div id="download" style="display:none">
+    <label for="fileName">Name of new file (for example: name of your client)</label>
+    <br>
+    <input type="text" value="output" id="fileName">
+    <button onclick="download()" class="btn btn-success">Download</button>
+    <a id="downloadAnchorElem" style="display:none"></a>
+</div>
