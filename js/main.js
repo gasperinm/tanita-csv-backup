@@ -44,7 +44,7 @@ function printStats(msg) {
 
 function buildConfig() {
     return {
-        delimiter: $('#delimiter').val(),
+        delimiter: ',',
         header: $('#header').prop('checked'),
         dynamicTyping: $('#dynamicTyping').prop('checked'),
         skipEmptyLines: $('#skipEmptyLines').prop('checked'),
@@ -179,7 +179,9 @@ function completeFn(results) {
         }
     }
 
-    var csv = Papa.unparse(list);
+    var csv = Papa.unparse(list, {
+        delimiter: $("#delimiter").val()
+    });
     localStorage.setItem("csvData", csv);
 
     $("#parsingSuccess").css("display", "block");

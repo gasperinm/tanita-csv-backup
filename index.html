@@ -24,6 +24,9 @@
 <label for="files">Select a DATA.CSV file you want to backup data for (for example: DATA1.CSV)</label>
 <br>
 <input type="file" id="files" multiple>
+<br>
+List separator (usually , or ;): <input type="text" id="delimiter" value=";" >
+<br>
 <button onclick="parse()" class="btn btn-success">Parse</button>
 <div id="parsingSuccess" class="alert alert-success" role="alert" style="display:none">
     Parsing successfull, download your file by clicking the Download button.
